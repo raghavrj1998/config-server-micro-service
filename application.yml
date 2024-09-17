@@ -1,1 +1,13 @@
-
+#register this service with the eureka discovery server
+eureka:
+  instance:
+#    we shall prefer ip address instead of domain name
+    prefer-ip-address: true
+  client:
+#    fetch the discovery server
+    fetch-registry: true
+#    and register this client with the server
+    register-with-eureka: true
+#    which is located at below location
+    service-url:
+      defaultZone: http://localhost:8761/eureka
